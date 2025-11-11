@@ -17,7 +17,6 @@ export function useAuth() {
     if (!$oidc.isUserLoggedIn) {
       return $oidc.login({
         doesCurrentHrefRequiresAuth: false,
-        redirectUrl: '/login',
       })
     }
   }
