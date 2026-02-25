@@ -1,4 +1,4 @@
-import { createOidc } from 'oidc-spa'
+import { createOidc } from "oidc-spa/core";
 import { DecodedIdTokenSchema } from '~/schemas/decodedIdToken'
 
 export default defineNuxtPlugin({
