@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/icon'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/icon', 'oidc-spa/nuxt-spa'],
   ssr: false,
   runtimeConfig: {
     public: {
@@ -18,8 +18,8 @@ export default defineNuxtConfig({
     minify: false,
   },
   vite: {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    plugins: [tailwindcss() as any],
+    // @ts-expect-error Type mismatch between Vite's plugin type and Nuxt's expected plugin type
+    plugins: [tailwindcss()],
     build: {
       minify: false,
       sourcemap: true, // Generates source maps for easier debugging

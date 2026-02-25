@@ -19,6 +19,7 @@
     "@nuxt/ui": "4.5.0",
     "eslint": "^10.0.2",
     "nuxt": "^4.3.1",
+    "oidc-spa": "link:../../.local/share/pnpm/global/5/node_modules/oidc-spa",
     "vue": "^3.5.29",
     "vue-router": "^5.0.3",
     "zod": "^4.3.6"

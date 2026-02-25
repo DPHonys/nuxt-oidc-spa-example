@@ -1,0 +1,2 @@
+overrides:
+  oidc-spa: link:../../.local/share/pnpm/global/5/node_modules/oidc-spa
