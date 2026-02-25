@@ -5,9 +5,11 @@ A Nuxt 4 Single Page Application demonstrating how to use `oidc-spa` with Keyclo
 ## Project Structure
 
 ### Modules
+
 - **`modules/oidc-spa.ts`** - Custom Nuxt module that integrates the `oidc-spa` Vite plugin. Ensures SSR is disabled and configures the plugin to freeze fetch/XHR/WebSocket during authentication flows.
 
 ### Composables
+
 - **`app/composables/useAuth.ts`** - Authentication composable providing:
   - `isAuthenticated` - Computed boolean for auth status
   - `idToken` - Computed decoded ID token
@@ -15,6 +17,7 @@ A Nuxt 4 Single Page Application demonstrating how to use `oidc-spa` with Keyclo
   - `logout()` - Initiates logout flow
 
 ### Plugins
+
 - **`app/plugins/01.oidc.client.ts`** - Client-only plugin that:
   - Initializes the `oidc-spa` with Keycloak configuration
   - Configures issuer URI, client ID, and base URL
@@ -22,16 +25,19 @@ A Nuxt 4 Single Page Application demonstrating how to use `oidc-spa` with Keyclo
   - Provides `$oidc` instance to the app
 
 ### Schemas
+
 - **`app/schemas/decodedIdToken.ts`** - Zod schema for validating decoded ID tokens:
   - `preferred_username` (string)
   - `name` (string)
 
 ### Pages
+
 - **`app/pages/index.vue`** - Demo page showing authentication status and login/logout buttons
 
 ## Setup
 
 1. **Install dependencies:**
+
 ```bash
 pnpm install
 ```
@@ -49,6 +55,7 @@ NUXT_PUBLIC_KEYCLOAK_CLIENT_ID=Your-Client-Id
 3. **Configure Keycloak:**
 
 In your Keycloak admin console:
+
 - Create a client with the Client ID matching your `.env` file
 - Set **Access Type** to `public`
 - Add valid redirect URIs:
@@ -70,7 +77,7 @@ pnpm dev
 - **Nuxt 4** - Vue.js framework (SPA mode)
 - **oidc-spa** - OpenID Connect client library
 - **Nuxt UI** - UI component library
-- **Tailwind CSS 4** - Styling
+- **Tailwind 4** - Styling
 - **TypeScript** - Type safety
 - **Zod** - Schema validation
 - **Keycloak** - Identity provider
