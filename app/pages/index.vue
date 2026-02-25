@@ -32,8 +32,8 @@ const { isAuthenticated, idToken, login, logout } = useAuth()
             size="lg"
           >
             <UIcon
-              :name="`material-symbols:${isAuthenticated ? 'check_circle' : 'error'}`"
-              class="mr-1"
+              :name="`material-symbols:${isAuthenticated ? 'check-circle' : 'error'}`"
+              class="size-4 mr-1"
             />
             {{ isAuthenticated ? 'Logged In' : 'Not Logged In' }}
           </UBadge>
@@ -84,7 +84,7 @@ const { isAuthenticated, idToken, login, logout } = useAuth()
             class="px-8"
             @click="logout"
           >
-            <UIcon name="material-symbols:logout" class="mr-2" />
+            <UIcon name="material-symbols:logout" class="size-5" />
             Logout
           </UButton>
         </div>
