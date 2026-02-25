@@ -35,4 +35,9 @@ export default defineNuxtConfig({
     server: true,
     client: true,
   },
+  oidcSpa: {
+    browserRuntimeFreeze: {
+      enabled: true,
+    },
+  },
 })
